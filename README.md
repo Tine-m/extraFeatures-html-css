@@ -29,3 +29,11 @@ Der refereres til favicon således:
   <link rel=”icon” href="favicon.ico">
 ```
 Vær opmærksom på at der kan være behov for at refreshe browser for at få vist den rigtige favicon. Det gøres med `Ctrl F5` 
+
+### Brug af e-mail link
+Man kan lave et e-mail link med en standardmodtager i HTML på følgende måde:
+
+```
+<a href="mailto:dig@dinmail.dk">Send os en email</a>
+```
+      
