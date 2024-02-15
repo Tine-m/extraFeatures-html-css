@@ -5,7 +5,7 @@ Se eksempel på hvordan de kaldes i HTML filerne (f.eks. `start.html`).
 <div th:replace="fragments/header :: header">...</div>
 ```
 ### Brug af nav 
-HTML Tag `<nav>` definerer et sæt af navigationslinks og er brugt til at lave en menu i toppen af siderne.
+HTML Tag `<nav>` definerer et sæt af navigationslinks og er i applikationen lavet som et fragment:
 
 ```
 <div th:fragment="header">
