@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kurser</title>
+    <link rel="stylesheet" type="text/css"
+          href="../../static/css/styles.css"
+          th:href="@{../css/styles.css}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Refresh favicon on website with Ctrl F5 -->
+    <link rel=”icon” href="favicon.ico">
+</head>
+<body>
+<div th:replace="fragments/header :: header">...</div>
+
+<div class="container">
+
+    <h1>Courses</h1>
+    <p>Don't press the buttons (they don't work ... yet!)</p>
+    <p><a href="/courses/create" class="btn btn-create">Create new Course</a></p>
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Start Date</th>
+            <th>ETCS</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="c: ${courses}">
+            <td th:text="${c.courseId}"/>
+            <td th:text="${c.title}"/>
+            <td th:text="${#dates.format(c.startDate, 'd MMMM yyyy')}"/>
+            <td th:text="${c.etcs}"/>
+            <td>
+                <a th:href="@{/courses/details(id=${c.courseId})}" class="btn btn-detail">Details</a> <!-- http://www.thymeleaf.org/doc/articles/standardurlsyntax.html -->
+                <a th:href="@{/courses/update(id=${c.courseId})}" class="btn btn-ed">Edit</a>
+                <a th:href="@{/courses/delete(id=${c.courseId})}" class="btn btn-del">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <footer class="footer">
+        <p> &copy; KEA 2024</p>
+        <p><a href="mailto:kea@kea.dk">Send email</a></p>
+        <i class="fa fa-instagram" style="font-size:24px"></i>
+        </footer>
+</div>
+
+</body>
+</html>
