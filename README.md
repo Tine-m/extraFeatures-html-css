@@ -16,12 +16,11 @@ Den første del af udtrykket `fragments/header` refererer til HTML filen `header
 </div>
 ```
 
-Du kan se i HTML filerne hv ordan de konkret bruges, se f.eks. `start.html`. 
+Du kan se i HTML filerne hvordan de konkret bruges, se f.eks. `start.html`. 
 
 ### Brug af nav 
 HTML Tag `<nav>` definerer et sæt af navigationslinks 
-og er i applikationen lavet som et fragment, 
-der definerer en menu i toppen af alle websider.
+og er i applikationen lavet som et fragment, der definerer en menu, som kan vises i toppen af alle websider.
 
 ```
 <div th:fragment="header">
