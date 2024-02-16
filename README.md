@@ -1,11 +1,24 @@
 ### Brug af fragments
-HTML fragmenter er blokke af HTML kode, man ønsker at genbruge. Der er i applikationen brugt et fragment til at lave en menu med navigationslinks i toppen af alle websider.
-Se eksempel på hvordan de kaldes i HTML filerne (f.eks. `start.html`). 
+Et HTML fragment er en blok HTML kode, man kan genbruge på flere HTML sider. 
+Det kaldes på en HTML side via Thymeleaf (se f.eks. eksempel i `start.html`):
+
 ```
 <div th:replace="fragments/header :: header">...</div>
 ```
+Den første del af udtrykket `fragments/header` refererer til HTML filen `header.html`. Udtrykket efter :: er en fragment selektor:. Fragment hedder i eksemplet også header:
+
+```
+<div th:fragment="header">
+    <nav>
+        ...
+   </nav>
+</div>
+```
+
 ### Brug af nav 
-HTML Tag `<nav>` definerer et sæt af navigationslinks og er i applikationen lavet som et fragment:
+HTML Tag `<nav>` definerer et sæt af navigationslinks 
+og er i applikationen lavet som et fragment, 
+der definerer en menu i toppen af alle websider.
 
 ```
 <div th:fragment="header">
