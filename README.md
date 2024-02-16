@@ -5,9 +5,9 @@ Et fragment kaldes på en HTML side via Thymeleaf:
 ```
 <div th:replace="fragments/header :: header">...</div>
 ```
-<br>
-Den første del af udtrykket `fragments/header` refererer til HTML filen `header.html`, hvor fragmentet er defineret. Udtrykket efter :: er en fragment selektor:. Fragmentet i `header.html` hedder også header:
-<br>
+
+Den første del af udtrykket `fragments/header` refererer til HTML filen `header.html`, hvor fragmentet er defineret. Udtrykket efter :: er en fragment selektor:. Fragmentet i `header.html` hedder også header, så derfor skal det skrives eftre dobbelt kolon:
+
 ```
 <div th:fragment="header">
     <nav>
@@ -15,8 +15,8 @@ Den første del af udtrykket `fragments/header` refererer til HTML filen `header
    </nav>
 </div>
 ```
-<br>
-Du kan se nærmere om hvordan det anvendes i HTML filerne, f.eks. `start.html`. 
+
+Du kan se i HTML filerne hv ordan de konkret bruges, se f.eks. `start.html`. 
 
 ### Brug af nav 
 HTML Tag `<nav>` definerer et sæt af navigationslinks 
